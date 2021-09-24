@@ -1,12 +1,17 @@
 import './App.css';
+import Header from './components/Header'
+import Registro from './components/Registro'
+import Reloj from './components/Reloj'
 
-function App() {
-  const saludo = "Hola esta es mi primera linea en React";
+
+
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{saludo}</h1>
-      </header>
+    <div>
+      <Header/>
+      <Registro/>
+      <Reloj/>
     </div>
   );
 }
