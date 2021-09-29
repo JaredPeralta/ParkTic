@@ -5,7 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import ListGroup from 'react-bootstrap/ListGroup';
+
+import ListaPlacas from "../components/ListaPlacas/ListaPlacas";
 
 
 const Registro = () => {
@@ -60,23 +61,7 @@ const Registro = () => {
 
             <Row className="d-flex justify-content-center align-items-center mt-3 mb-3">
                 <Col xs={6}>
-                    <ListGroup className="text-center">
-                        {placas.map((placa) => {
-                            if(placa.horaSalida){
-                                return(
-                                    <ListGroup.Item>
-                                        {placa.placa} - {placa.horaEntrada.toLocaleString()} - {placa.horaSalida.toLocaleString()} - ${placa.precio}
-                                    </ListGroup.Item>
-                                )
-                            }else{
-                                return(
-                                    <ListGroup.Item>
-                                        {placa.placa} - {placa.horaEntrada.toLocaleString()}
-                                    </ListGroup.Item>
-                                )
-                            }
-                        })}
-                    </ListGroup>
+                    <ListaPlacas placas={placas}/>
                 </Col>
             </Row>
         </Container>
